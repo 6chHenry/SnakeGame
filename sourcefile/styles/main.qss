@@ -1,0 +1,88 @@
+/* 整个菜单窗口的背景 */
+QMainWindow {
+    background-color: #F8F8F8; /* 柔和的浅灰色背景 */
+}
+
+/* 所有的 QPushButton 基础样式 */
+QPushButton {
+    background-color: #6a1b9a; /* 紫色调，作为按钮的主色 */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px; /* 圆角 */
+    font-family: "Arial";
+    font-size: 16px; /* 比 C++ 代码中设置的 18px 略小，方便 QSS 覆盖 */
+    min-width: 120px; /* 最小宽度 */
+    outline: none; /* 移除点击后的虚线边框 */
+}
+
+/* QPushButton 鼠标悬停时的效果 */
+QPushButton:hover {
+    background-color: #7b1fa2; /* 悬停时颜色略深 */
+    border: 1px solid #c2b2d8; /* 细边框 */
+}
+
+/* QPushButton 被按下时的效果 */
+QPushButton:pressed {
+    background-color: #5d0c7f; /* 按下时颜色更深 */
+    padding-left: 20px; /* 模拟按下效果，向右移动 */
+    padding-top: 12px; /* 模拟按下效果，向下移动 */
+}
+
+/* 可选中按钮（如难度选择和皮肤选择）的选中状态 */
+QPushButton:checked {
+    background-color: #2e7d32; /* 选中时变为深绿色 */
+    border: 2px solid #1b5e20; /* 选中时有更明显的边框 */
+    font-weight: bold; /* 选中时字体加粗 */
+}
+
+/* 标题标签的样式 */
+QLabel#titleLabel { /* 使用对象名选择器确保只影响这个标签 */
+    color: #333333; /* 深灰色文本 */
+    font-family: "Arial";
+    font-size: 22px; /* 标题字体大小 */
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px; /* 底部填充，与下方按钮拉开距离 */
+}
+
+/* 按钮组中按钮的最小宽度，防止被挤压 */
+QButtonGroup > QPushButton {
+    min-width: 100px;
+}
+
+/* 经典皮肤按钮的样式 */
+QPushButton#classicSkinButton {
+    background-color: #4CAF50; /* 绿色 */
+}
+
+QPushButton#classicSkinButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton#classicSkinButton:pressed {
+    background-color: #3e8e41;
+}
+
+QPushButton#classicSkinButton:checked {
+    background-color: #2e7d32;
+    border: 2px solid #1b5e20;
+}
+
+/* 蓝色皮肤按钮的样式 */
+QPushButton#blueSkinButton {
+    background-color: #2196F3; /* 蓝色 */
+}
+
+QPushButton#blueSkinButton:hover {
+    background-color: #1976D2;
+}
+
+QPushButton#blueSkinButton:pressed {
+    background-color: #1565C0;
+}
+
+QPushButton#blueSkinButton:checked {
+    background-color: #0D47A1;
+    border: 2px solid #000080; /* 深蓝色边框 */
+}
